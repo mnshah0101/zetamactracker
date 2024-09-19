@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Zetamac Score Tracker",
+  "version": "1.0",
+  "description": "Automatically saves your Zetamac math game scores",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://arithmetic.zetamac.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://arithmetic.zetamac.com/game?key=*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
