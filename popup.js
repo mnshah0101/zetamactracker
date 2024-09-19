@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scores.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
 
-    scores = scores.splice(0, 10);
+
 
     scores.forEach(function (score) {
       const row = table.insertRow(-1);

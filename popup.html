@@ -7,6 +7,18 @@
         body {
             width: 300px;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .table-container {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
         }
 
         table {
@@ -23,19 +35,29 @@
 
         th {
             background-color: #f2f2f2;
+            position: sticky;
+            top: 0;
+            z-index: 1;
         }
     </style>
 </head>
 
 <body>
     <h2>Your Zetamac Scores</h2>
-    <table id="scoresTable">
-        <tr>
-            <th>Score</th>
-            <th>Date</th>
-            <th>Time</th>
-        </tr>
-    </table>
+    <div class="table-container">
+        <table id="scoresTable">
+            <thead>
+                <tr>
+                    <th>Score</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Scores will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
     <script src="popup.js"></script>
 </body>
 
