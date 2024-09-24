@@ -3,7 +3,7 @@
   "name": "Zetamac Score Tracker",
   "version": "1.0",
   "description": "Automatically saves your Zetamac math game scores",
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["storage"],
   "host_permissions": ["https://arithmetic.zetamac.com/*"],
   "background": {
     "service_worker": "background.js"
